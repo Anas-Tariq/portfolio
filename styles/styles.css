@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+:root {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  --main-color: #ff004f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+body {
+  background: #080808;
+  color: #fff;
+}
+/* Header nav and hero */
+#header {
+  width: 100%;
+  height: 100vh;
+  /* background-image: url(../assets/anas2.jpg); */
+  background-size: cover;
+  background-position: center;
+}
+/* Main container */
+.container {
+  padding: 10px 10%;
+}
+/******************************************/
+/*               Nav Style                */
+/******************************************/
+.container nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.logo {
+  width: 140px;
+}
+/* Nav links style */
+.container nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 10px 20px;
+}
+.container nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+}
+.container nav ul li a::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: var(--main-color);
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s ease-in-out;
+}
+.container nav ul li a:hover::after {
+  width: 100%;
+}
+
+.header-text {
+  margin-top: 20%;
+  font-size: 30px;
+}
+.header-text h1 {
+  font-size: 60px;
+  margin-top: 20px;
+}
+.header-text h1 span {
+  color: var(--main-color);
+}
+/******************************************/
+/*              About Style               */
+/******************************************/
+#about {
+  padding: 80px 0;
+  color: #ababab;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+/* img column */
+.about-col-1 {
+  flex-basis: 35%;
+}
+.about-col-1 img {
+  width: 100%;
+  border-radius: 15px;
+}
+/* info column */
+.about-col-2 {
+  flex-basis: 60%;
+}
+.sub-title {
+  font-size: 60px;
+  font-weight: 600;
+  color: #fff;
+}
+/* about tab-link */
+.tabs {
+  display: flex;
+  margin: 20px 0 40px;
+}
+.tab-link {
+  margin-right: 50px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+}
+.tab-link::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: var(--main-color);
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: 0.5s ease-in-out;
+}
+.tab-link:hover::after {
+  width: 100%;
+}
+.tab-link.active::after {
+  width: 50%;
+}
+/* tab content */
+.tab-content .main-about-list > li {
+  list-style: none;
+  margin: 10px 0;
+}
+.tab-content .main-about-list > li span {
+  color: var(--main-color);
+  font-size: 14px;
+}
+.tab-content {
+  display: none;
+}
+.tab-content.active {
+  display: block;
+}
+.logos {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.logos img {
+  width: 8%;
+  aspect-ratio: 3/2;
+  object-fit: contain;
+}
+/******************************************/
+/*            Projects Style              */
+/******************************************/
+#projects {
+  padding: 50px 0;
+}
+.work-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+.work {
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.work img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  transition: 0.5s ease-in-out;
+}
+.work:hover img {
+  transform: scale(1.1);
+}
+.layer {
+  width: 100%;
+  height: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), var(--main-color));
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  font-size: 14px;
+  transition: height 0.5s ease-in-out;
+}
+.work:hover .layer {
+  height: 100%;
+}
+.layer h3 {
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.layer a {
+  margin: 20px;
+  color: var(--main-color);
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 60px;
+  background: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+}
