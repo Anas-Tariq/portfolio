@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <title>Anas Tariq</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
     <link href="/styles/fontawesome/css/fontawesome.css" rel="stylesheet" />
     <link href="/styles/fontawesome/css/brands.css" rel="stylesheet" />
     <link href="/styles/fontawesome/css/solid.css" rel="stylesheet" />
@@ -18,22 +18,32 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.
     <header id="header">
       <div class="container">
         <nav>
-          <img src="assets/logo5.png" alt="logo" class="logo" style="width: 5%;" />
-          <ul>
-            <li><a href="#">Home</a></li>
+          <img
+            src="assets/logo5.png"
+            alt="logo"
+            class="logo"
+            style="width: 5%"
+          />
+          <ul id="sidemenu">
+            <li><a href="#header">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
-            <li><a href="#">Contact</a></li>
-          <i class="fas fa-times"></i>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fas fa-times" onclick="closemenu()"></i>
           </ul>
-          <i class="fas fa-bars"></i>
+          <i class="fas fa-bars" onclick="openmenu()"></i>
         </nav>
         <div class="header-text">
           <p>Front-End Developer</p>
           <h1>
             Hi, I'm <span>Anas</span> Tariq <br />
-            <a href="assets/Anas Tariq - Front-end React Developer.pdf" download class="btn" style="font-size: 18px;">Download CV</a>
+            <a
+              href="assets/Anas Tariq - Front-end React Developer.pdf"
+              download
+              class="btn"
+              style="font-size: 18px"
+              >Download CV</a
+            >
           </h1>
         </div>
       </div>
@@ -326,7 +336,10 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.
         <div class="row">
           <div class="contact-info">
             <h2 class="sub-title">Contact Me</h2>
-            <p><i class="fas fa-paper-plane"></i> <a href="mailto:anas_max60@hotmail.com">anas_max60@hotmail.com</a></p>
+            <p>
+              <i class="fas fa-paper-plane"></i>
+              <a href="mailto:anas_max60@hotmail.com">anas_max60@hotmail.com</a>
+            </p>
             <p><i class="fas fa-phone-square"></i> +201550092413</p>
             <div class="social-icons">
               <a href="https://www.linkedin.com/in/anas-tariqq/"
@@ -336,7 +349,12 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.
                 ><i class="fab fa-github"></i
               ></a>
             </div>
-            <a href="assets/Anas Tariq - Front-end React Developer.pdf" download class="btn">Download CV</a>
+            <a
+              href="assets/Anas Tariq - Front-end React Developer.pdf"
+              download
+              class="btn"
+              >Download CV</a
+            >
           </div>
           <div class="contact-form">
             <form>
@@ -374,6 +392,15 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.
           event.currentTarget.classList.add("active");
           document.getElementById(tabname).classList.add("active");
         }
+      }
+    </script>
+    <script>
+      var sidemenu = document.getElementById("sidemenu");
+      function openmenu() {
+        sidemenu.style.right = "0";
+      }
+      function closemenu() {
+        sidemenu.style.right = "-200px";
       }
     </script>
   </body>
