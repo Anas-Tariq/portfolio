@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <title>Anas Tariq</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="assets/logo.ico" type="image/x-icon" />
     <link href="/styles/fontawesome/css/fontawesome.css" rel="stylesheet" />
     <link href="/styles/fontawesome/css/brands.css" rel="stylesheet" />
     <link href="/styles/fontawesome/css/solid.css" rel="stylesheet" />
@@ -19,10 +19,10 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.
       <div class="container">
         <nav>
           <img
-            src="assets/logo5.png"
+            src="assets/logo.png"
             alt="logo"
             class="logo"
-            style="width: 5%"
+            style="width: 3%"
           />
           <ul id="sidemenu">
             <li><a href="#header">Home</a></li>
@@ -53,7 +53,7 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.
       <div class="container">
         <div class="row">
           <div class="about-col-1">
-            <img src="assets/anas3.jpg" alt="me" />
+            <img src="assets/anas.jpg" alt="me" />
           </div>
           <div class="about-col-2">
             <h1 class="sub-title">About Me</h1>
@@ -266,7 +266,7 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.
                 Educational platform for courses, books, conference meeting, and
                 consultaion
               </p>
-              <a href="https://ispeaker.refilex.com/"
+              <a target="_blank" href="https://ispeaker.refilex.com/"
                 ><i class="fas fa-external-link-alt"></i
               ></a>
             </div>
@@ -274,9 +274,9 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.
           <div class="work">
             <img src="assets/projects/renuterra.png" alt="Renuterra" />
             <div class="layer">
-              <h3>Renuterra</h3>
+              <h3>Renuterra | <span style="color: red;">(Under Development)</span></h3>
               <p>Trash & recycling company website</p>
-              <a href="https://staging.renuterra.com/"
+              <a target="_blank" href="#"
                 ><i class="fas fa-external-link-alt"></i
               ></a>
             </div>
@@ -286,7 +286,7 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.
             <div class="layer">
               <h3>TotalEngergies Egypt</h3>
               <p>Integrated energy and petroleum company website</p>
-              <a href="https://totalenergies.eg/"
+              <a target="_blank" href="https://totalenergies.eg/"
                 ><i class="fas fa-external-link-alt"></i
               ></a>
             </div>
@@ -299,7 +299,7 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.
                 Consulting firm that helps Entrepreneurs, Investors, lenders,
                 management, and corporate directors
               </p>
-              <a href="https://axcellservice.com/"
+              <a target="_blank" href="https://axcellservice.com/"
                 ><i class="fas fa-external-link-alt"></i
               ></a>
             </div>
@@ -312,7 +312,7 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.
                 Educational technological solutions, products, services,
                 training and consultation to educational facilities’
               </p>
-              <a href="https://plugn.xyz/"
+              <a target="_blank" href="https://plugn.xyz/"
                 ><i class="fas fa-external-link-alt"></i
               ></a>
             </div>
@@ -322,7 +322,7 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.
             <div class="layer">
               <h3>Industrial Control Authority</h3>
               <p>Egyptian quality control of industrial products website</p>
-              <a href="http://ica.gov.eg/"
+              <a target="_blank" href="http://ica.gov.eg/"
                 ><i class="fas fa-external-link-alt"></i
               ></a>
             </div>
@@ -338,7 +338,7 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.
             <h2 class="sub-title">Contact Me</h2>
             <p>
               <i class="fas fa-paper-plane"></i>
-              <a href="mailto:anas_max60@hotmail.com">anas_max60@hotmail.com</a>
+              <a href="mailto:anas_max60@hotmail.com" style="color: var(--main-color);">anas_max60@hotmail.com</a>
             </p>
             <p><i class="fas fa-phone-square"></i> +201550092413</p>
             <div class="social-icons">
@@ -357,29 +357,31 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.
             >
           </div>
           <div class="contact-form">
-            <form>
-              <input type="text" name="name" placeholder="Your Name" required />
+            <form name="submit-to-google-sheet">
+              <input type="text" name="Name" placeholder="Your Name" required />
               <input
                 type="email"
-                name="email"
+                name="Email"
                 placeholder="Your Email"
                 required
               />
               <textarea
-                name="message"
+                name="Message"
                 id="message"
                 placeholder="Your Message"
                 rows="6"
               ></textarea>
               <button type="submit" class="btn">Submit</button>
             </form>
+            <span id="res"></span>
           </div>
         </div>
       </div>
       <div class="copyright">
-        <p>Copyright © 2024 Anas Tariq</p>
+        <p>Thank you for your time <i class="fas fa-heart" style="color: var(--main-color);"></i>, Have a good day</p>
       </div>
     </section>
+    <!-- About tabs behaivor -->
     <script>
       var tabLinks = document.getElementsByClassName("tab-link");
       var tabContents = document.getElementsByClassName("tab-content");
@@ -394,6 +396,7 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.
         }
       }
     </script>
+    <!-- nav menu event in small screens -->
     <script>
       var sidemenu = document.getElementById("sidemenu");
       function openmenu() {
@@ -402,6 +405,25 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.
       function closemenu() {
         sidemenu.style.right = "-200px";
       }
+    </script>
+    <!-- From Script -->
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbxgSa9YLBjiXR9EUeqgQOQzYJx6KhMat-V-fJikZD2dlPmRbpDdlBRVUAZ38_TVhUyn9w/exec'
+      const form = document.forms['submit-to-google-sheet']
+      const msg = document.getElementById('res')
+    
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(() => {
+              msg.innerHTML = ""
+            }, 5000)
+            form.reset()
+          })
+          .catch(error => console.error('Error!', error.message))
+      })
     </script>
   </body>
 </html>
