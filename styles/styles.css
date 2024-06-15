@@ -308,7 +308,7 @@ form textarea {
 /******************************************/
 /*          Small Scrren Style            */
 /******************************************/
-nav .fas {
+nav .fas, nav .fa {
   display: none;
 }
 
@@ -323,7 +323,7 @@ nav .fas {
   .header-text h1 {
     font-size: 30px;
   }
-  nav .fas {
+  nav .fas, nav .fa {
     display: block;
   }
   nav ul {
@@ -343,7 +343,7 @@ nav .fas {
     display: block;
     margin: 25px;
   }
-  nav ul .fas {
+  nav ul .fas,   nav ul .fa {
     position: absolute;
     top: 25px;
     left: 25px;
