@@ -52,7 +52,7 @@ body {
 .container nav ul li a {
   color: #fff;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 16px;
   position: relative;
 }
 .container nav ul li a::after {
@@ -112,14 +112,17 @@ body {
 /* about tab-link */
 .tabs {
   display: flex;
+  gap: 25px;
   margin: 20px 0 40px;
 }
 .tab-link {
-  margin-right: 50px;
   font-size: 18px;
   font-weight: 500;
   cursor: pointer;
+  padding: 5px;
   position: relative;
+  border-radius: 5px;
+  transition: 0.5s ease-in-out;
 }
 .tab-link::after {
   content: "";
@@ -133,6 +136,14 @@ body {
 }
 .tab-link:hover::after {
   width: 100%;
+}
+.tab-link:hover {
+  background: var(--main-color);
+  color: #fff;
+}
+.tab-link.active {
+  background: var(--main-color);
+  color: #fff;
 }
 .tab-link.active::after {
   width: 50%;
@@ -162,6 +173,11 @@ body {
   width: 8%;
   aspect-ratio: 3/2;
   object-fit: contain;
+  filter: grayscale(100%);
+  transition: 0.2s ease-in-out;
+}
+.logos img:hover {
+  filter: grayscale(0%);
 }
 /******************************************/
 /*            Projects Style              */
@@ -259,7 +275,22 @@ body {
   color: var(--main-color);
   transform: translateY(-5px);
 }
-.btn {
+.first-btn {
+  display: inline-block;
+  margin: 50px auto;
+  width: fit-content;
+  background: var(--main-color);
+  padding: 14px 50px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #fff;
+  transition: 0.5s ease-in-out;
+}
+.first-btn:hover {
+  background: var(--main-color);
+  opacity: 0.8;
+}
+.second-btn {
   display: inline-block;
   margin: 50px auto;
   width: fit-content;
@@ -271,7 +302,7 @@ body {
   color: #fff;
   transition: background 0.5s ease-in-out;
 }
-.btn:hover {
+.second-btn:hover {
   background: var(--main-color);
 }
 /* Contact Form Style */
@@ -290,11 +321,12 @@ form textarea {
   font-size: 18px;
   border-radius: 6px;
 }
-.contact-form form .btn {
+.contact-form form .first-btn {
   padding: 14px 60px;
   font-size: 18px;
   margin-top: 20px;
   cursor: pointer;
+  transition: 0.5s ease-in-out;
 }
 .copyright {
   width: 100%;
@@ -308,7 +340,8 @@ form textarea {
 /******************************************/
 /*          Small Scrren Style            */
 /******************************************/
-nav .fas, nav .fa {
+nav .fas,
+nav .fa {
   display: none;
 }
 
@@ -323,7 +356,8 @@ nav .fas, nav .fa {
   .header-text h1 {
     font-size: 30px;
   }
-  nav .fas, nav .fa {
+  nav .fas,
+  nav .fa {
     display: block;
   }
   nav ul {
@@ -343,7 +377,8 @@ nav .fas, nav .fa {
     display: block;
     margin: 25px;
   }
-  nav ul .fas,   nav ul .fa {
+  nav ul .fas,
+  nav ul .fa {
     position: absolute;
     top: 25px;
     left: 25px;
@@ -374,7 +409,7 @@ nav .fas, nav .fa {
   }
   .layer p {
     font-size: 12px;
-}
+  }
   .layer a {
     margin: 10px;
     font-size: 12px;

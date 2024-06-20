@@ -4,13 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Anas Tariq</title>
-    <meta name="description" content="Anas Tariq Portfolio">
-    <meta name=”robots” content="index, follow">
+    <meta name="description" content="Anas Tariq Portfolio" />
+    <meta name="”robots”" content="index, follow" />
     <link rel="shortcut icon" href="assets/logo.ico" type="image/x-icon" />
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="/styles/fontawesome/css/fontawesome.css" rel="stylesheet" />
+    <link
+      href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <!-- <link href="/styles/fontawesome/css/fontawesome.css" rel="stylesheet" />
     <link href="/styles/fontawesome/css/brands.css" rel="stylesheet" />
-    <link href="/styles/fontawesome/css/solid.css" rel="stylesheet" />
+    <link href="/styles/fontawesome/css/solid.css" rel="stylesheet" /> -->
     <link rel="stylesheet" href="styles/styles.css" />
     <!-- <script src="
 https://cdn.jsdelivr.net/npm/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.js
@@ -37,17 +40,13 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.
           <i class="fas fa fa-bars" onclick="openmenu()"></i>
         </nav>
         <div class="header-text">
-          <p>Front-End Developer</p>
           <h1>
-            Hi, I'm <span>Anas</span> Tariq <br />
-            <a
-              href="assets/Anas Tariq - Front-end React Developer.pdf"
-              download
-              class="btn"
-              style="font-size: 18px"
-              >Download CV</a
-            >
+            Hi, I'm <span style="font-family: serif">Anas Tariq</span> <br />
           </h1>
+          <p>Front-End Developer</p>
+          <a href="#projects" class="first-btn" style="font-size: 18px">
+            Explore Projects
+          </a>
         </div>
       </div>
     </header>
@@ -277,7 +276,9 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.
           <div class="work">
             <img src="assets/projects/renuterra.png" alt="Renuterra" />
             <div class="layer">
-              <h3>Renuterra | <span style="color: red;">(Under Development)</span></h3>
+              <h3>
+                Renuterra | <span style="color: red">(Under Development)</span>
+              </h3>
               <p>Trash & recycling company website</p>
               <!-- <a target="_blank" href="#"
                 ><i class="fas fa fa-external-link-alt fa-external-link"></i
@@ -340,10 +341,14 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.
           <div class="contact-info">
             <h2 class="sub-title">Contact Me</h2>
             <p>
-              <i class="fas fa fa-paper-plane"></i>
-              <a href="mailto:anas_max60@hotmail.com" style="color: var(--main-color);">anas_max60@hotmail.com</a>
+              <i class="fas fa fa-envelope"></i>
+              <a
+                href="mailto:anas.tali286@gmail.com"
+                style="color: var(--main-color)"
+                >anas.tali286@gmail.com</a
+              >
             </p>
-            <p><i class="fas fa fa-phone-square"></i> +201550092413</p>
+            <p><i class="fas fa fa-phone"></i> +201550092413</p>
             <div class="social-icons">
               <a href="https://www.linkedin.com/in/anas-tariqq/"
                 ><i class="fab fa fa-linkedin"></i
@@ -355,7 +360,8 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.
             <a
               href="assets/Anas Tariq - Front-end React Developer.pdf"
               download
-              class="btn"
+              target="_blank"
+              class="second-btn"
               >Download CV</a
             >
           </div>
@@ -374,14 +380,18 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.
                 placeholder="Your Message"
                 rows="6"
               ></textarea>
-              <button type="submit" class="btn">Submit</button>
+              <button type="submit" class="first-btn">Submit</button>
             </form>
             <span id="res"></span>
           </div>
         </div>
       </div>
       <div class="copyright">
-        <p>Thank you for your time <i class="fas fa fa-heart" style="color: var(--main-color);"></i>, Have a good day</p>
+        <p>
+          Thank you for your time
+          <i class="fas fa fa-heart" style="color: var(--main-color)"></i>, Have
+          a good day
+        </p>
       </div>
     </section>
     <!-- About tabs behaivor -->
@@ -411,22 +421,23 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.
     </script>
     <!-- From Script -->
     <script>
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbxgSa9YLBjiXR9EUeqgQOQzYJx6KhMat-V-fJikZD2dlPmRbpDdlBRVUAZ38_TVhUyn9w/exec'
-      const form = document.forms['submit-to-google-sheet']
-      const msg = document.getElementById('res')
-    
-      form.addEventListener('submit', e => {
-        e.preventDefault()
-        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-          .then(response => {
-            msg.innerHTML = "Message sent successfully"
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbxgSa9YLBjiXR9EUeqgQOQzYJx6KhMat-V-fJikZD2dlPmRbpDdlBRVUAZ38_TVhUyn9w/exec";
+      const form = document.forms["submit-to-google-sheet"];
+      const msg = document.getElementById("res");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            msg.innerHTML = "Message sent successfully";
             setTimeout(() => {
-              msg.innerHTML = ""
-            }, 5000)
-            form.reset()
+              msg.innerHTML = "";
+            }, 5000);
+            form.reset();
           })
-          .catch(error => console.error('Error!', error.message))
-      })
+          .catch((error) => console.error("Error!", error.message));
+      });
     </script>
   </body>
 </html>
